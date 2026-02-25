@@ -71,3 +71,4 @@
 /home/helis/Projects/AvaloniaTest/AvaloniaTest/obj/Debug/net10.0/AvaloniaTest.pdb
 /home/helis/Projects/AvaloniaTest/AvaloniaTest/obj/Debug/net10.0/AvaloniaTest.genruntimeconfig.cache
 /home/helis/Projects/AvaloniaTest/AvaloniaTest/obj/Debug/net10.0/ref/AvaloniaTest.dll
+/home/helis/Projects/AvaloniaTest/AvaloniaTest/obj/Debug/net10.0/AvaloniaTest.sourcelink.json

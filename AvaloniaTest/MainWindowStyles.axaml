@@ -6,9 +6,12 @@
     </Border>
   </Design.PreviewWith>
 
-  <Style Selector="Grid.MainGrid">
+  <Style Selector="Grid#MainGrid">
     <Setter Property="Background" Value="#1f1f1f"/>
   </Style>
+  <!-- <Style Selector="WrapPanel">
+  <Setter Property="Background" Value="#1f1f1f"/>
+  </Style> -->
 
   <Style Selector="TextBlock.h1">
     <Setter Property="FontSize" Value="20"/>
@@ -25,6 +28,22 @@
     <Setter Property="Margin" Value="0 0 15 15"/>
     <Setter Property="Background" Value="#192024"/>
     <Setter Property="HorizontalAlignment" Value="Left"/>
+
+    <Style Selector="^ StackPanel">
+      <Style Selector="^ TextBlock">
+        <Setter Property="Foreground" Value="Yellow"/>
+      </Style>
+      <Style Selector="^ RadioButton">
+        <Setter Property="Foreground" Value="White"/>
+      </Style>
+
+      <Style Selector="^ CheckBox">
+        <Setter Property="Foreground" Value="White"/>
+      </Style>
+
+
+    </Style>
+
   </Style>
 
   <Style Selector="Button#CheckResults">
