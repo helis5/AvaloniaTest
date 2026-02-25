@@ -1,0 +1,103 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaTest.MainWindow"
+        Title="AvaloniaTest">
+    <Window.Styles>
+        <StyleInclude Source="/MainWindowStyles.axaml"/>
+    </Window.Styles>
+
+
+
+    <Grid ColumnDefinitions="10, 10*" RowDefinitions="50, 10*, 60" x:Name="MainGrid">
+        <TextBlock Grid.Column="1" VerticalAlignment="Center" Classes="h1">Тест по теме "Основы системы контроля версий GIT"</TextBlock>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <WrapPanel>
+                <!-- Вопрос 1: RadioButton (одиночный выбор) -->
+                <Border Classes="Question">
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="1. Какая команда создаёт новую ветку?"/>
+                        <RadioButton x:Name="rbQ1_1" GroupName="q1" Content="git branch"/>
+                        <RadioButton x:Name="rbQ1_2" GroupName="q1" Content="git checkout"/>
+                        <RadioButton x:Name="rbQ1_3" GroupName="q1" Content="git merge"/>
+                        <RadioButton x:Name="rbQ1_4" GroupName="q1" Content="git new"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Вопрос 2: CheckBox (множественный выбор) -->
+                <Border Classes="Question">
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="2. Какие команды используются для слияния веток?"/>
+                        <CheckBox x:Name="chQ2_1" Content="git merge"/>
+                        <CheckBox x:Name="chQ2_2" Content="git rebase"/>
+                        <CheckBox x:Name="chQ2_3" Content="git cherry-pick"/>
+                        <CheckBox x:Name="chQ2_4" Content="git combine"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Вопрос 3: RadioButton -->
+                <Border Classes="Question">
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="3. Что делает команда git commit --amend?"/>
+                        <RadioButton x:Name="rbQ3_1" GroupName="q3" Content="Изменяет последний коммит"/>
+                        <RadioButton x:Name="rbQ3_2" GroupName="q3" Content="Создаёт новый коммит"/>
+                        <RadioButton x:Name="rbQ3_3" GroupName="q3" Content="Отменяет последний коммит"/>
+                        <RadioButton x:Name="rbQ3_4" GroupName="q3" Content="Ничего не делает"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Вопрос 4: CheckBox -->
+                <Border Classes="Question">
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="4. Какие состояния могут быть у файла в Git?"/>
+                        <CheckBox x:Name="chQ4_1" Content="modified"/>
+                        <CheckBox x:Name="chQ4_2" Content="staged"/>
+                        <CheckBox x:Name="chQ4_3" Content="committed"/>
+                        <CheckBox x:Name="chQ4_4" Content="tracked"/>
+                        <CheckBox x:Name="chQ4_5" Content="untracked"/>
+                        <CheckBox x:Name="chQ4_6" Content="deleted"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Вопрос 5: RadioButton -->
+                <Border Classes="Question">
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="5. Как просмотреть историю коммитов?"/>
+                        <RadioButton x:Name="rbQ5_1" GroupName="q5" Content="git log"/>
+                        <RadioButton x:Name="rbQ5_2" GroupName="q5" Content="git history"/>
+                        <RadioButton x:Name="rbQ5_3" GroupName="q5" Content="git show"/>
+                        <RadioButton x:Name="rbQ5_4" GroupName="q5" Content="git status"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Вопрос 6: CheckBox -->
+                <Border Classes="Question">
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="6. Какие команды используются для отмены изменений?"/>
+                        <CheckBox x:Name="chQ6_1" Content="git reset"/>
+                        <CheckBox x:Name="chQ6_2" Content="git revert"/>
+                        <CheckBox x:Name="chQ6_3" Content="git checkout"/>
+                        <CheckBox x:Name="chQ6_4" Content="git undo"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Вопрос 7: RadioButton -->
+                <Border Classes="Question">
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="7. Что такое Git?"/>
+                        <RadioButton x:Name="rbQ7_1" GroupName="q7" Content="Система контроля версий"/>
+                        <RadioButton x:Name="rbQ7_2" GroupName="q7" Content="Текстовый редактор"/>
+                        <RadioButton x:Name="rbQ7_3" GroupName="q7" Content="Компилятор"/>
+                        <RadioButton x:Name="rbQ7_4" GroupName="q7" Content="База данных"/>
+                    </StackPanel>
+                </Border>
+
+                
+            </WrapPanel>
+        </ScrollViewer>
+        <TextBlock x:Name="Status" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"/>
+        <Button x:Name="CheckResults" Click="CheckResults_Click" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Content="Завершить тест"/>
+    </Grid>
+</Window>

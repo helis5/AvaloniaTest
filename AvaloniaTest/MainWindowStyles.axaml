@@ -1,0 +1,49 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <!-- Add Controls for Previewer Here -->
+    </Border>
+  </Design.PreviewWith>
+
+  <Style Selector="Grid.MainGrid">
+    <Setter Property="Background" Value="#1f1f1f"/>
+  </Style>
+
+  <Style Selector="TextBlock.h1">
+    <Setter Property="FontSize" Value="20"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="Foreground" Value="LightBlue"/>
+  </Style>
+
+
+  <Style Selector="Border.Question">
+    <Setter Property="BorderBrush" Value="Gray"/>
+    <Setter Property="BorderThickness" Value="3"/>
+    <Setter Property="CornerRadius" Value="10"/>
+    <Setter Property="Padding" Value="10"/>
+    <Setter Property="Margin" Value="0 0 15 15"/>
+    <Setter Property="Background" Value="#192024"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+  </Style>
+
+  <Style Selector="Button#CheckResults">
+    <Setter Property="HorizontalAlignment" Value="Right"/>
+    <Setter Property="Margin" Value="0 0 10 0"/>
+    <Setter Property="Padding" Value="10 5"/>
+    <Setter Property="Background" Value="#007ACC"/>
+    <Setter Property="Foreground" Value="White"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="BorderBrush" Value="#005A9E"/>
+    <Setter Property="BorderThickness" Value="2"/>
+    <Setter Property="CornerRadius" Value="5"/>
+    <Setter Property="Cursor" Value="Hand"/>
+  </Style>
+
+  <Style Selector="TextBlock#Status">
+    <Setter Property="FontSize" Value="20"/>
+    <Setter Property="FontWeight" Value="SemiBold"/>
+    <Setter Property="Foreground" Value="Yellow"/>
+    <Setter Property="Margin" Value=" 10 0 0 0"/>
+  </Style>
+</Styles>
