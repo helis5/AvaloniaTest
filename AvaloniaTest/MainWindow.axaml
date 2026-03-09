@@ -4,15 +4,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaTest.MainWindow"
-        Title="AvaloniaTest">
+        Title="Тест по Git">
     <Window.Styles>
         <StyleInclude Source="/MainWindowStyles.axaml"/>
     </Window.Styles>
 
-
-
     <Grid ColumnDefinitions="10, 10*" RowDefinitions="50, 10*, 60" x:Name="MainGrid">
         <TextBlock Grid.Column="1" VerticalAlignment="Center" Classes="h1">Тест по теме "Основы системы контроля версий GIT"</TextBlock>
+        
         <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
             <WrapPanel>
                 <!-- Вопрос 1: RadioButton (одиночный выбор) -->
@@ -94,10 +93,43 @@
                     </StackPanel>
                 </Border>
 
-                
+                <!-- Вопрос 8: ComboBox -->
+                <Border Classes="Question">
+                    <StackPanel Spacing="10">
+                        <TextBlock FontWeight="Bold" Text="8. Какая команда используется для загрузки изменений из удалённого репозитория?"/>
+                        <ComboBox x:Name="cbQ8" SelectedIndex="0" MaxDropDownHeight="150">
+                            <ComboBoxItem>git pull</ComboBoxItem>
+                            <ComboBoxItem>git push</ComboBoxItem>
+                            <ComboBoxItem>git fetch</ComboBoxItem>
+                            <ComboBoxItem>git clone</ComboBoxItem>
+                            <ComboBoxItem>git remote</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                </Border>
+
+                <!-- Вопрос 9: ComboBox -->
+                <Border Classes="Question">
+                    <StackPanel Spacing="10">
+                        <TextBlock FontWeight="Bold" Text="9. Как называется файл, в котором указывают, какие файлы не должны отслеживаться Git?"/>
+                        <ComboBox x:Name="cbQ9" SelectedIndex="0" MaxDropDownHeight="150">
+                            <ComboBoxItem>.gitignore</ComboBoxItem>
+                            <ComboBoxItem>.gitconfig</ComboBoxItem>
+                            <ComboBoxItem>.gitkeep</ComboBoxItem>
+                            <ComboBoxItem>.gitattributes</ComboBoxItem>
+                            <ComboBoxItem>README.md</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                </Border>
             </WrapPanel>
         </ScrollViewer>
-        <TextBlock x:Name="Status" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"/>
-        <Button x:Name="CheckResults" Click="CheckResults_Click" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Content="Завершить тест"/>
+
+        <!-- Нижняя панель с результатом и кнопками -->
+        <Grid Grid.Column="1" Grid.Row="2" ColumnDefinitions="*, Auto, Auto" Margin="0,10">
+            <TextBlock x:Name="Status" VerticalAlignment="Center" Grid.Column="0"/>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="10" HorizontalAlignment="Right">
+                <Button Classes="BB" x:Name="CheckResults" Click="CheckResults_Click" Content="Завершить тест" Padding="15,8"/>
+                <Button Classes="BB" Click="Reset_Click" Content="Сбросить ответы" Padding="15,8"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

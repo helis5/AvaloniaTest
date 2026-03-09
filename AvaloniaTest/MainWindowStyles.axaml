@@ -46,7 +46,7 @@
 
   </Style>
 
-  <Style Selector="Button#CheckResults">
+  <Style Selector="Button.BB">
     <Setter Property="HorizontalAlignment" Value="Right"/>
     <Setter Property="Margin" Value="0 0 10 0"/>
     <Setter Property="Padding" Value="10 5"/>
